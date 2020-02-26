@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Midwestern Interactive</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <a href="index.html">
+                <img class="logo" src="mwi-logo-horizontal.png" alt="Midwest Interactive Logo">
+            </a>
+            <hr>
+        </figure>
+        <div>
+            <h1 class="heading1">HEADING ONE</h1>
+        </div>
+    </header>
+    <!--heading 2 section-->
+    <nav>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="box"></div>
+                <h3>Heading 2</h3>
+                <p>This is a paragraph text that is meant to flex and wrap to a new line base on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+                <button type="button" class="button">Read More</button>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="box"></div>
+                <h3>Heading 2</h3>
+                <p>This is a paragraph text that is meant to flex and wrap to a new line base on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+                <button class="button" type="button">Read More</button>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="box"></div>
+                <h3>Heading 2</h3>
+                <p>This is a paragraph text that is meant to flex and wrap to a new line base on the number of characters in this container. Please make sure this is looking pretty based on the amount of characters this is taking up.</p>
+                <button class="button" type="button">Read More</button>
+            </div>
+        </div>
+        <br>
+    </nav>
+    <!--contact section-->
+    <main>
+        <div class="contact">
+            <div class="container">
+                <h2>CONTACT</h2>
+                <form class="main-form needs-validation" action="action_page.html" method="POST" novalidate>
+                    <div class="form-group">
+                        <label class="label" for="email">Email</label>
+                        <input id="email" class="form-control" type="email" name="email" required>
+                        <div class="invalid-feedback">Must use a valid email.</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="subject"> Subject </label>
+                        <input id="subject" class="form-control" type="text" name="subject" required>
+                        <div class="invalid-feedback">Subject is required.</div>
+                    </div>
+                    <div class="form-group2">
+                        <label class="label" for="message">Message</label>
+                        <textarea id="message" class="form-control" name="message" rows="10" required></textarea>
+                        <div class="invalid-feedback">Message is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <input class="submit" type="submit" value="Submit">
+                    </div>
+                </form>
+                <!--form validation-->
+                <script>
+                    let form = document.querySelector('.needs-validation');
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated')
+                    })
+                </script>
+
+            </div>
+        </div>
+        <!--javscript puzzle & footer-->
+        <div class="bottom">
+            <div class="heading1">
+                <h1>HEADING ONE</h1>
+            </div>
+            <!--once link has been clicked, the console and alert message should display the removeDuplicates array-->
+            <div id="bottom-paragraph">
+                <p>Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when this <a onClick="counter()" style="font-weight: 600; color: red; cursor: pointer;">link is clicked.</a> If the operation has
+                    been completed already notify the user that this has already been done.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Thank you for taking the Midwestern Interactive Benchmark Test.</p>
+    </footer>
+</body>
+
+</html>
